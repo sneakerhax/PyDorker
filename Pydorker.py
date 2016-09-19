@@ -31,7 +31,7 @@ def main():
         banner()
         run_dorker(site, dorklist)
     else:
-		print usage
+	print usage
 
 if __name__ == "__main__":
     main()
