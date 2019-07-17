@@ -2,7 +2,7 @@ from googlesearch import search
 import time
 import sys
 
-usage = "Usage: Pydorker.py <site.com> <dorklist>"
+usage = "Usage: PyDorker.py <site.com> <dorklist>"
 
 
 def banner():
