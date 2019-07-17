@@ -1,28 +1,31 @@
-from google import search
+from googlesearch import search
 import time
-import urllib2
 import sys
 
 usage = "Usage: Pydorker.py <site.com> <dorklist>"
 
+
 def banner():
-    print "#########################"
-    print "#       Pydorker        #"
-    print "#     By: sneakerhax    #"
-    print "#########################"
-    print ""
+    print("    ____        ____             __")
+    print("   / __ \__  __/ __ \____  _____/ /_____  _____")
+    print("  / /_/ / / / / / / / __ \/ ___/ //_/ _ \/ ___/")
+    print(" / ____/ /_/ / /_/ / /_/ / /  / ,< /  __/ /")
+    print("/_/    \__, /_____/\____/_/  /_/|_|\___/_/")
+    print("      /____/")
+
 
 def run_dorker(site, dorklist):
     with open(dorklist) as dorklist:
         for line in dorklist:
             try:
                 dork = str(site) + " " + str(line)
-                print "[Running Google Dork] - " + str(dork)
+                print("[Running Google Dork] - " + str(dork))
                 for url in search(dork, num=10, stop=1):
-                    print "[+] " + str(url)
-                print "\n"
-            except urllib2.HTTPError, e:
-                print "[+] " + str(e)
+                    print("[+] " + str(url))
+                    print("\n")
+            except:
+                print("[-] error searching \n")
+
 
 def main():
     if len(sys.argv) == 3:
@@ -31,7 +34,7 @@ def main():
         banner()
         run_dorker(site, dorklist)
     else:
-        print usage
+        print(usage)
 
 if __name__ == "__main__":
     main()
