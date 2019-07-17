@@ -1,5 +1,5 @@
 # Pydorker
-A dorking tool written in Python
+A dorking tool written in Python3
 
 ## Usage
 To run a Google dork you have to create a file with a list of Dorks for the particular thing you are looking for and place it in the dorkfiles folder. I will be adding more lists over time.
