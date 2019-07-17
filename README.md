@@ -1,4 +1,4 @@
-# Pydorker
+# Pydorker (Python3)
 A dorking tool written in Python3
 
 ## Usage
