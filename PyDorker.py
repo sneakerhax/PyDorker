@@ -23,7 +23,7 @@ def run_dorker(site, dorklist):
                 for url in search(dork, num=10, stop=1):
                     print("[+] " + str(url))
                     print("\n")
-            except:
+            except Exception as e:
                 print("[-] error searching or no results \n")
 
 
@@ -35,6 +35,7 @@ def main():
         run_dorker(site, dorklist)
     else:
         print(usage)
+
 
 if __name__ == "__main__":
     main()
