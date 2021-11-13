@@ -24,7 +24,7 @@ def run_dorker(site, dorklist):
                     print("[+] " + str(url))
                     print("\n")
             except:
-                print("[-] error searching \n")
+                print("[-] error searching or no results \n")
 
 
 def main():
